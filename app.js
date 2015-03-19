@@ -12,6 +12,9 @@ var todo = require('./routes/todo');
 var dbInit = require('./lib/dbinit');
 dbInit();
 
+var tcpServer = require('./lib/tcpServer');
+tcpServer.listen(1337, '127.0.0.1');
+
 var app = express();
 
 // view engine setup
